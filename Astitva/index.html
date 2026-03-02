@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Astitva: The Essence of She | Women's Day 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Dancing+Script:wght@600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --rose: #d4607a;
+    --blush: #f5c6d0;
+    --petal: #fce8ec;
+    --cream: #fdf5f0;
+    --mauve: #c47a8a;
+    --deep: #8b3a52;
+    --gold: #c9a96e;
+    --text: #3d2535;
+    --light-text: #7a5568;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Jost', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
+
+  /* PETALS */
+  .petals-bg { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; overflow: hidden; }
+  .petal { position: absolute; top: -40px; width: 12px; height: 16px; background: linear-gradient(135deg, #f8b4c0, #e8909e); border-radius: 50% 0 50% 0; opacity: 0.4; animation: fall linear infinite; }
+  .petal:nth-child(1)  { left: 5%;  animation-duration: 9s;  animation-delay: 0s;   width: 10px; height: 14px; }
+  .petal:nth-child(2)  { left: 15%; animation-duration: 12s; animation-delay: 2s;   width: 8px;  height: 12px; background: linear-gradient(135deg,#fad4dc,#f0a8b4); }
+  .petal:nth-child(3)  { left: 25%; animation-duration: 10s; animation-delay: 4s; }
+  .petal:nth-child(4)  { left: 35%; animation-duration: 14s; animation-delay: 1s;   width: 14px; height: 18px; background: linear-gradient(135deg,#fce0e8,#f8c0cc); }
+  .petal:nth-child(5)  { left: 45%; animation-duration: 11s; animation-delay: 6s; }
+  .petal:nth-child(6)  { left: 55%; animation-duration: 13s; animation-delay: 3s;   width: 9px;  height: 13px; }
+  .petal:nth-child(7)  { left: 65%; animation-duration: 8s;  animation-delay: 5s;   background: linear-gradient(135deg,#f9c8d4,#eda0b0); }
+  .petal:nth-child(8)  { left: 75%; animation-duration: 15s; animation-delay: 0.5s; width: 11px; height: 15px; }
+  .petal:nth-child(9)  { left: 85%; animation-duration: 10s; animation-delay: 7s; }
+  .petal:nth-child(10) { left: 92%; animation-duration: 12s; animation-delay: 2.5s; width: 8px;  height: 11px; }
+  @keyframes fall { 0%{transform:translateY(-40px) rotate(0deg);opacity:0;} 10%{opacity:0.4;} 90%{opacity:0.3;} 100%{transform:translateY(110vh) rotate(360deg);opacity:0;} }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; width: 100%; z-index: 200; background: rgba(253,245,240,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(212,96,122,0.15); padding: 14px 40px; display: flex; align-items: center; justify-content: space-between; }
+  .nav-brand { font-family: 'Dancing Script', cursive; font-size: 1.6rem; color: var(--rose); }
+  .nav-links { display: flex; gap: 32px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--light-text); font-size: 0.85rem; font-weight: 500; letter-spacing: 1.5px; text-transform: uppercase; transition: color 0.3s; }
+  .nav-links a:hover { color: var(--rose); }
+
+  /* HERO */
+  #hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background: radial-gradient(ellipse at 20% 50%, rgba(244,194,210,0.4) 0%, transparent 50%), radial-gradient(ellipse at 80% 20%, rgba(248,218,228,0.3) 0%, transparent 40%), radial-gradient(ellipse at 60% 80%, rgba(235,180,200,0.25) 0%, transparent 40%), var(--cream); }
+  .corner { position: absolute; width: 120px; height: 120px; opacity: 0.35; }
+  .corner svg { width: 100%; height: 100%; }
+  .corner-tl { top: 80px; left: 20px; }
+  .corner-tr { top: 80px; right: 20px; transform: scaleX(-1); }
+  .corner-bl { bottom: 20px; left: 20px; transform: scaleY(-1); }
+  .corner-br { bottom: 20px; right: 20px; transform: scale(-1); }
+  .hero-content { position: relative; z-index: 2; padding: 120px 20px 80px; max-width: 820px; }
+  .hero-org { font-size: 1rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--mauve); margin-bottom: 6px; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
+  .hero-college { font-size: 1.05rem; font-weight: 700; color: var(--deep); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 28px; opacity: 0; animation: fadeUp 0.8s 0.4s forwards; }
+  .hero-presents { font-size: 0.8rem; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; opacity: 0; animation: fadeUp 0.8s 0.6s forwards; }
+  .hero-title { font-family: 'Dancing Script', cursive; font-size: clamp(3rem,8vw,5.5rem); color: var(--deep); line-height: 1.1; margin-bottom: 16px; opacity: 0; animation: fadeUp 0.8s 0.8s forwards; }
+  .hero-title span { color: var(--rose); }
+  .hero-sub { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: clamp(1rem,2.5vw,1.3rem); color: var(--light-text); margin-bottom: 36px; opacity: 0; animation: fadeUp 0.8s 1s forwards; }
+  .hero-date-wrap { display: inline-flex; align-items: center; background: white; border: 1.5px solid rgba(212,96,122,0.2); border-radius: 60px; padding: 12px 36px; box-shadow: 0 8px 40px rgba(212,96,122,0.12); margin-bottom: 28px; opacity: 0; animation: fadeUp 0.8s 1.2s forwards; }
+  .date-part { font-size: 0.7rem; font-weight: 600; letter-spacing: 3px; text-transform: uppercase; color: var(--light-text); padding: 0 20px; }
+  .date-main { font-family: 'Dancing Script', cursive; font-size: 1.8rem; color: var(--rose); padding: 0 20px; border-left: 1px solid rgba(212,96,122,0.2); border-right: 1px solid rgba(212,96,122,0.2); }
+  .hero-tagline { font-size: 0.9rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--rose); opacity: 0; animation: fadeUp 0.8s 1.4s forwards; }
+  .scroll-hint { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; opacity: 0; animation: fadeIn 1s 2s forwards; color: var(--light-text); font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; }
+  .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--rose), transparent); animation: scrollPulse 2s ease-in-out infinite; }
+  @keyframes scrollPulse { 0%,100%{opacity:0.4;transform:scaleY(1);} 50%{opacity:1;transform:scaleY(1.2);} }
+
+  /* SECTION */
+  section { position: relative; z-index: 1; padding: 90px 20px; }
+  .section-header { text-align: center; margin-bottom: 60px; }
+  .section-eyebrow { font-size: 0.72rem; font-weight: 600; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+  .section-title { font-family: 'Dancing Script', cursive; font-size: clamp(2.2rem,5vw,3.5rem); color: var(--deep); margin-bottom: 14px; }
+  .section-divider { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 12px; }
+  .divider-line { width: 60px; height: 1px; background: var(--blush); }
+  .divider-flower { color: var(--rose); font-size: 1rem; }
+
+  /* ABOUT */
+  #about { background: white; }
+  .about-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+  .about-text p { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; line-height: 1.9; color: var(--light-text); margin-bottom: 16px; }
+  .about-text p strong { color: var(--deep); font-weight: 600; }
+  .about-card { background: var(--petal); border-radius: 24px; padding: 36px; border: 1px solid rgba(212,96,122,0.12); position: relative; overflow: hidden; }
+  .about-card::before { content: '♀'; position: absolute; font-size: 120px; color: rgba(212,96,122,0.06); right: -10px; top: -10px; font-family: sans-serif; }
+  .stat-row { display: flex; gap: 24px; margin-bottom: 20px; }
+  .stat { flex: 1; text-align: center; background: white; border-radius: 16px; padding: 20px 10px; box-shadow: 0 4px 20px rgba(212,96,122,0.08); }
+  .stat-num { font-family: 'Dancing Script', cursive; font-size: 2.4rem; color: var(--rose); display: block; line-height: 1; }
+  .stat-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--light-text); margin-top: 4px; }
+  .about-address { font-size: 0.82rem; color: var(--light-text); line-height: 1.7; display: flex; gap: 10px; align-items: flex-start; }
+
+  /* EVENTS */
+  #events { background: linear-gradient(180deg, var(--cream) 0%, #fef0f4 100%); }
+  .events-container { max-width: 1100px; margin: 0 auto; }
+  .day-block { margin-bottom: 60px; }
+  .day-label { display: inline-flex; align-items: center; gap: 14px; margin-bottom: 32px; }
+  .day-num { background: var(--rose); color: white; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Dancing Script', cursive; font-size: 1.4rem; box-shadow: 0 6px 20px rgba(212,96,122,0.35); }
+  .day-title-text { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 600; color: var(--deep); }
+  .day-date-text { font-size: 0.75rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; color: var(--mauve); }
+  .events-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+
+  /* EVENT CARD */
+  .event-card { background: white; border-radius: 20px; padding: 32px 28px; border: 1px solid rgba(212,96,122,0.1); box-shadow: 0 4px 30px rgba(212,96,122,0.06); transition: all 0.4s cubic-bezier(0.34,1.56,0.64,1); cursor: pointer; position: relative; overflow: hidden; text-align: left; }
+  .event-card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, var(--rose), var(--mauve)); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease; }
+  .event-card:hover { transform: translateY(-8px); box-shadow: 0 20px 50px rgba(212,96,122,0.18); border-color: rgba(212,96,122,0.25); }
+  .event-card:hover::after { transform: scaleX(1); }
+  .event-icon { font-size: 2.4rem; margin-bottom: 16px; display: block; }
+  .event-name { font-family: 'Cormorant Garamond', serif; font-size: 1.35rem; font-weight: 600; color: var(--deep); margin-bottom: 10px; }
+  .event-desc { font-size: 0.85rem; color: var(--light-text); line-height: 1.7; }
+  .event-tag { display: inline-block; margin-top: 14px; font-size: 0.67rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; background: var(--petal); color: var(--rose); padding: 4px 12px; border-radius: 20px; }
+  .event-click-hint { display: flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 0.72rem; font-weight: 600; color: var(--rose); letter-spacing: 1px; text-transform: uppercase; opacity: 0.8; }
+  .event-click-hint svg { transition: transform 0.3s; }
+  .event-card:hover .event-click-hint svg { transform: translateX(4px); }
+
+  /* =========== MODAL =========== */
+  .modal-overlay { position: fixed; inset: 0; background: rgba(61,37,53,0.6); backdrop-filter: blur(8px); z-index: 500; display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+  .modal-overlay.open { opacity: 1; pointer-events: all; }
+  .modal { background: white; border-radius: 28px; max-width: 660px; width: 100%; max-height: 90vh; overflow-y: auto; box-shadow: 0 40px 100px rgba(139,58,82,0.3); transform: translateY(40px) scale(0.96); transition: transform 0.4s cubic-bezier(0.34,1.56,0.64,1); position: relative; scrollbar-width: thin; scrollbar-color: var(--blush) transparent; }
+  .modal::-webkit-scrollbar { width: 6px; }
+  .modal::-webkit-scrollbar-track { background: transparent; }
+  .modal::-webkit-scrollbar-thumb { background: var(--blush); border-radius: 10px; }
+  .modal-overlay.open .modal { transform: translateY(0) scale(1); }
+
+  .modal-header { padding: 36px 40px 30px; border-radius: 28px 28px 0 0; position: relative; }
+  .modal-day-badge { display: inline-block; background: rgba(255,255,255,0.2); color: rgba(255,255,255,0.95); font-size: 0.67rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; padding: 5px 14px; border-radius: 20px; margin-bottom: 14px; border: 1px solid rgba(255,255,255,0.25); }
+  .modal-event-icon { font-size: 3rem; margin-bottom: 10px; display: block; }
+  .modal-title { font-family: 'Dancing Script', cursive; font-size: 2.3rem; color: white; margin-bottom: 8px; line-height: 1.2; text-shadow: 0 2px 10px rgba(0,0,0,0.15); }
+  .modal-date-line { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.8); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.5px; }
+  .modal-close { position: absolute; top: 18px; right: 18px; width: 38px; height: 38px; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.3); border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; color: white; font-size: 1rem; transition: all 0.2s; font-family: sans-serif; }
+  .modal-close:hover { background: rgba(255,255,255,0.35); transform: rotate(90deg); }
+
+  .modal-body { padding: 32px 40px 40px; }
+  .modal-section { margin-bottom: 28px; }
+  .modal-section-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--rose); margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .modal-section-label::after { content: ''; flex: 1; height: 1px; background: var(--blush); }
+
+  .info-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .info-pill { background: var(--petal); border-radius: 12px; padding: 14px 18px; flex: 1; min-width: 150px; }
+  .info-pill-label { font-size: 0.65rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--mauve); margin-bottom: 5px; }
+  .info-pill-val { font-size: 0.88rem; font-weight: 600; color: var(--deep); line-height: 1.5; }
+
+  .theme-box { background: linear-gradient(135deg, var(--petal), #fff8fa); border-radius: 14px; padding: 16px 20px; font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; font-style: italic; color: var(--deep); border-left: 4px solid var(--rose); }
+
+  .rule-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .rule-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 0.87rem; color: var(--text); line-height: 1.75; background: var(--petal); border-radius: 12px; padding: 13px 16px; transition: background 0.2s; }
+  .rule-list li:hover { background: #fad8e2; }
+  .rule-bullet { width: 24px; height: 24px; background: linear-gradient(135deg, var(--rose), var(--mauve)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.67rem; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+  .judging-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 10px; }
+  .judge-pill { background: linear-gradient(135deg, #fce8ec, #fff0f4); border: 1px solid rgba(212,96,122,0.15); border-radius: 14px; padding: 14px 10px; text-align: center; font-size: 0.8rem; font-weight: 600; color: var(--deep); transition: transform 0.2s, box-shadow 0.2s; }
+  .judge-pill:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(212,96,122,0.15); }
+  .judge-pill .ji { font-size: 1.5rem; margin-bottom: 6px; display: block; }
+
+  /* MARQUEE */
+  #gallery { background: var(--deep); padding: 70px 0; overflow: hidden; }
+  .gallery-header { text-align: center; margin-bottom: 48px; padding: 0 20px; }
+  .gallery-header .section-eyebrow { color: var(--blush); }
+  .gallery-header .section-title { color: white; }
+  .gallery-header .divider-line { background: rgba(255,255,255,0.2); }
+  .gallery-header .divider-flower { color: var(--blush); }
+  .marquee-wrap { position: relative; overflow: hidden; }
+  .marquee-track { display: flex; gap: 20px; animation: marquee 30s linear infinite; width: max-content; }
+  .marquee-track:hover { animation-play-state: paused; }
+  @keyframes marquee { from{transform:translateX(0);} to{transform:translateX(-50%);} }
+  .marquee-item { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 28px 36px; flex-shrink: 0; text-align: center; width: 200px; cursor: pointer; transition: background 0.3s, transform 0.3s; }
+  .marquee-item:hover { background: rgba(255,255,255,0.12); transform: translateY(-4px); }
+  .marquee-icon { font-size: 2.2rem; margin-bottom: 10px; display: block; }
+  .marquee-label { font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); }
+
+  /* CTA */
+  #register { background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #fce4ec 100%); text-align: center; }
+  .cta-box { max-width: 600px; margin: 0 auto; }
+  .cta-text { font-family: 'Cormorant Garamond', serif; font-size: 1.15rem; color: var(--light-text); line-height: 1.8; margin-bottom: 36px; }
+  .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { background: var(--rose); color: white; padding: 14px 40px; border-radius: 60px; text-decoration: none; font-size: 0.82rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s ease; box-shadow: 0 8px 30px rgba(212,96,122,0.4); border: none; cursor: pointer; display: inline-block; }
+  .btn-primary:hover { background: var(--deep); transform: translateY(-2px); }
+  .btn-outline { background: transparent; color: var(--deep); padding: 14px 40px; border-radius: 60px; text-decoration: none; font-size: 0.82rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; transition: all 0.3s ease; border: 1.5px solid var(--deep); cursor: pointer; display: inline-block; }
+  .btn-outline:hover { background: var(--deep); color: white; transform: translateY(-2px); }
+
+  footer { background: var(--text); color: rgba(255,255,255,0.6); text-align: center; padding: 40px 20px; }
+  .footer-brand { font-family: 'Dancing Script', cursive; font-size: 2rem; color: var(--blush); margin-bottom: 8px; }
+  .footer-org { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 4px; }
+  .footer-address { font-size: 0.75rem; color: rgba(255,255,255,0.35); margin-bottom: 24px; line-height: 1.7; }
+  .footer-line { width: 60px; height: 1px; background: rgba(255,255,255,0.1); margin: 24px auto; }
+  .footer-bottom { font-size: 0.72rem; color: rgba(255,255,255,0.25); letter-spacing: 1px; }
+
+  @keyframes fadeUp { from{opacity:0;transform:translateY(24px);} to{opacity:1;transform:translateY(0);} }
+  @keyframes fadeIn  { from{opacity:0;} to{opacity:1;} }
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  @media (max-width: 768px) {
+    nav { padding: 14px 20px; }
+    .nav-links { display: none; }
+    .about-inner { grid-template-columns: 1fr; gap: 36px; }
+    .corner { width: 70px; height: 70px; }
+    .modal-header { padding: 28px 24px 22px; }
+    .modal-body { padding: 24px 22px 32px; }
+    .modal-title { font-size: 1.8rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="petals-bg" aria-hidden="true">
+  <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+  <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+  <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+  <div class="petal"></div>
+</div>
+
+<nav>
+  <div class="nav-brand">Astitva</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#events">Events</a></li>
+    <li><a href="#register">Register</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="corner corner-tl"><svg viewBox="0 0 100 100" fill="none"><path d="M10 90 Q10 10 90 10" stroke="#d4607a" stroke-width="1.5" fill="none"/><path d="M20 90 Q20 20 90 20" stroke="#d4607a" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="10" cy="10" r="3" fill="#d4607a" opacity="0.6"/><circle cx="90" cy="10" r="2" fill="#c9a96e" opacity="0.6"/></svg></div>
+  <div class="corner corner-tr"><svg viewBox="0 0 100 100" fill="none"><path d="M10 90 Q10 10 90 10" stroke="#d4607a" stroke-width="1.5" fill="none"/><path d="M20 90 Q20 20 90 20" stroke="#d4607a" stroke-width="0.8" fill="none" opacity="0.5"/><circle cx="10" cy="10" r="3" fill="#d4607a" opacity="0.6"/></svg></div>
+  <div class="corner corner-bl"><svg viewBox="0 0 100 100" fill="none"><path d="M10 90 Q10 10 90 10" stroke="#d4607a" stroke-width="1.5" fill="none"/><path d="M20 90 Q20 20 90 20" stroke="#d4607a" stroke-width="0.8" fill="none" opacity="0.5"/></svg></div>
+  <div class="corner corner-br"><svg viewBox="0 0 100 100" fill="none"><path d="M10 90 Q10 10 90 10" stroke="#d4607a" stroke-width="1.5" fill="none"/><path d="M20 90 Q20 20 90 20" stroke="#d4607a" stroke-width="0.8" fill="none" opacity="0.5"/></svg></div>
+
+  <div class="hero-content">
+    <div class="hero-org">Global Educare Foundation's</div>
+    <div class="hero-college">Global College of BBA and BCA, Hubli</div>
+    <div class="hero-presents">✦ Women's Cell Presents ✦</div>
+    <h1 class="hero-title"><span>Astitva</span> : The Essence of She</h1>
+    <p class="hero-sub">— Crafting beauty, creating flavors, and conquering the stage.</p>
+    <div class="hero-date-wrap">
+      <span class="date-part">March</span>
+      <span class="date-main">3rd &amp; 4th</span>
+      <span class="date-part">2026</span>
+    </div>
+    <div class="hero-tagline">✦ Celebrating Strength, Style &amp; Spirit ✦</div>
+    <div style="margin-top:18px;opacity:0;animation:fadeUp 0.8s 1.6s forwards;display:flex;align-items:center;justify-content:center;gap:8px;font-size:0.82rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--light-text);">
+      <span style="color:var(--rose);">📍</span> Global College of BBA &amp; BCA, Hubli
+    </div>
+  </div>
+  <div class="scroll-hint"><div class="scroll-line"></div><span>Explore</span></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">About the Event</div>
+    <h2 class="section-title">Celebrating Every Woman</h2>
+    <div class="section-divider"><div class="divider-line"></div><span class="divider-flower">✿</span><div class="divider-line"></div></div>
+  </div>
+  <div class="about-inner">
+    <div class="about-text reveal reveal-delay-1">
+      <p><strong>Astitva</strong> — meaning "existence" — is a celebration of womanhood in all its beauty, power, and grace. This event honors the essence of every woman who crafts, creates, and conquers.</p>
+      <p>Organized by the <strong>Women's Cell</strong> of Global College of BBA &amp; BCA, this two-day cultural extravaganza brings together talented women for a series of artistic, culinary, and performing arts competitions.</p>
+      <p>Join us on <strong>March 3rd &amp; 4th, 2026</strong> as we celebrate Strength, Style, and Spirit!</p>
+    </div>
+    <div class="about-visual reveal reveal-delay-2">
+      <div class="about-card">
+        <div class="stat-row">
+          <div class="stat"><span class="stat-num">2</span><div class="stat-label">Days</div></div>
+          <div class="stat"><span class="stat-num">6</span><div class="stat-label">Events</div></div>
+        </div>
+        <div class="stat-row">
+          <div class="stat" style="flex:1;"><span class="stat-num" style="font-size:1.8rem;">Mar 3&amp;4</span><div class="stat-label">2026</div></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section id="events">
+  <div class="section-header reveal">
+    <div class="section-eyebrow">Schedule &amp; Sub-Events</div>
+    <h2 class="section-title">Two Days of Wonder</h2>
+    <div class="section-divider"><div class="divider-line"></div><span class="divider-flower">✿</span><div class="divider-line"></div></div>
+    <p style="font-size:0.85rem;color:var(--light-text);margin-top:14px;letter-spacing:0.5px;">✨ Click on any event card to view full details &amp; rules</p>
+  </div>
+
+  <div class="events-container">
+    <div class="day-block">
+      <div class="day-label reveal">
+        <div class="day-num">1</div>
+        <div><div class="day-title-text">Day One</div><div class="day-date-text">Tuesday, March 3, 2026</div></div>
+      </div>
+      <div class="events-grid">
+        <div class="event-card reveal reveal-delay-1" onclick="openModal('picture')">
+          <span class="event-icon">🖼️</span>
+          <div class="event-name">Picture Interpretation</div>
+          <div class="event-desc">Interpret a given picture through your unique perspective and original storytelling in written form.</div>
+          <span class="event-tag">Day 1 · Creative Writing</span>
+          <div class="event-click-hint">View Details &amp; Rules <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+        <div class="event-card reveal reveal-delay-2" onclick="openModal('henna')">
+          <span class="event-icon">🌿</span>
+          <div class="event-name">Henna Art</div>
+          <div class="event-desc">Showcase intricate mehndi designs through the ancient and beautiful tradition of henna art.</div>
+          <span class="event-tag">Day 1 · Art</span>
+          <div class="event-click-hint">View Details &amp; Rules <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+        <div class="event-card reveal reveal-delay-3" onclick="openModal('rangoli')">
+          <span class="event-icon">🎨</span>
+          <div class="event-name">Rangoli</div>
+          <div class="event-desc">Create stunning floor art using colors, petals, and eco-friendly materials. Your imagination, your canvas.</div>
+          <span class="event-tag">Day 1 · Art</span>
+          <div class="event-click-hint">View Details &amp; Rules <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+        <div class="event-card reveal reveal-delay-4" onclick="openModal('cooking')">
+          <span class="event-icon">🍽️</span>
+          <div class="event-name">Cooking Without Fire</div>
+          <div class="event-desc">Prepare delicious dishes using raw ingredients — no heat, all creativity, full flavor!</div>
+          <span class="event-tag">Day 1 · Culinary</span>
+          <div class="event-click-hint">View Details &amp; Rules <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-block">
+      <div class="day-label reveal">
+        <div class="day-num" style="background:var(--mauve);">2</div>
+        <div><div class="day-title-text">Day Two</div><div class="day-date-text">Wednesday, March 4, 2026</div></div>
+      </div>
+      <div class="events-grid">
+        <div class="event-card reveal reveal-delay-1" onclick="openModal('ramp')">
+          <span class="event-icon">👠</span>
+          <div class="event-name">Ramp Walk</div>
+          <div class="event-desc">Portray a famous woman personality with costume and a powerful monologue. Own the stage with confidence!</div>
+          <span class="event-tag" style="background:#f5e8f0;color:var(--mauve);">Day 2 · Fashion &amp; Performance</span>
+          <div class="event-click-hint" style="color:var(--mauve);">View Details &amp; Rules <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+        <div class="event-card reveal reveal-delay-2" onclick="openModal('dance')">
+          <span class="event-icon">💃</span>
+          <div class="event-name">Dance</div>
+          <div class="event-desc">Express Women's Empowerment through movement. Solo or group — any style that lights up the stage.</div>
+          <span class="event-tag" style="background:#f5e8f0;color:var(--mauve);">Day 2 · Performing Arts</span>
+          <div class="event-click-hint" style="color:var(--mauve);">View Details &amp; Rules <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section id="gallery">
+  <div class="gallery-header">
+    <div class="section-eyebrow">All Events at a Glance</div>
+    <h2 class="section-title">The Stage is Yours</h2>
+    <div class="section-divider"><div class="divider-line"></div><span class="divider-flower">✿</span><div class="divider-line"></div></div>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <div class="marquee-item" onclick="openModal('picture')"><span class="marquee-icon">🖼️</span><div class="marquee-label">Picture Interpretation</div></div>
+      <div class="marquee-item" onclick="openModal('henna')"><span class="marquee-icon">🌿</span><div class="marquee-label">Henna Art</div></div>
+      <div class="marquee-item" onclick="openModal('rangoli')"><span class="marquee-icon">🎨</span><div class="marquee-label">Rangoli</div></div>
+      <div class="marquee-item" onclick="openModal('cooking')"><span class="marquee-icon">🍽️</span><div class="marquee-label">Cooking Without Fire</div></div>
+      <div class="marquee-item" onclick="openModal('ramp')"><span class="marquee-icon">👠</span><div class="marquee-label">Ramp Walk</div></div>
+      <div class="marquee-item" onclick="openModal('dance')"><span class="marquee-icon">💃</span><div class="marquee-label">Dance</div></div>
+      <div class="marquee-item" onclick="openModal('picture')"><span class="marquee-icon">🖼️</span><div class="marquee-label">Picture Interpretation</div></div>
+      <div class="marquee-item" onclick="openModal('henna')"><span class="marquee-icon">🌿</span><div class="marquee-label">Henna Art</div></div>
+      <div class="marquee-item" onclick="openModal('rangoli')"><span class="marquee-icon">🎨</span><div class="marquee-label">Rangoli</div></div>
+      <div class="marquee-item" onclick="openModal('cooking')"><span class="marquee-icon">🍽️</span><div class="marquee-label">Cooking Without Fire</div></div>
+      <div class="marquee-item" onclick="openModal('ramp')"><span class="marquee-icon">👠</span><div class="marquee-label">Ramp Walk</div></div>
+      <div class="marquee-item" onclick="openModal('dance')"><span class="marquee-icon">💃</span><div class="marquee-label">Dance</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="register">
+  <div class="cta-box">
+    <div class="section-eyebrow reveal">Be Part of the Celebration</div>
+    <h2 class="section-title reveal">Join Astitva 2026</h2>
+    <div class="section-divider reveal"><div class="divider-line" style="background:rgba(139,58,82,0.2);"></div><span class="divider-flower">✿</span><div class="divider-line" style="background:rgba(139,58,82,0.2);"></div></div>
+    <p class="cta-text reveal" style="margin-top:24px;">Step forward, shine bright, and celebrate the essence of being a woman. Click any event above to view its full rules before participating!</p>
+
+    <!-- Contact Details -->
+    <div class="reveal" style="margin-top:40px;background:white;border-radius:24px;padding:36px;box-shadow:0 8px 40px rgba(212,96,122,0.12);border:1px solid rgba(212,96,122,0.15);text-align:left;">
+      <div style="text-align:center;margin-bottom:24px;">
+        <div style="font-size:0.7rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:6px;">Get in Touch</div>
+        <div style="font-family:'Dancing Script',cursive;font-size:1.8rem;color:var(--deep);">Contact &amp; Registration</div>
+        <div style="font-size:0.88rem;color:var(--light-text);margin-top:8px;font-family:'Cormorant Garamond',serif;font-style:italic;">To register your names, contact your respective class representatives.</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <div style="background:linear-gradient(135deg,var(--petal),#fff8fa);border-radius:16px;padding:18px 22px;display:flex;align-items:center;gap:16px;border-left:4px solid var(--rose);">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--rose),var(--mauve));border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">👩‍🏫</div>
+          <div style="flex:1;">
+            <div style="font-size:0.67rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--mauve);margin-bottom:3px;">Event Co-ordinator</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--deep);">Prof. Srujana</div>
+          </div>
+          <a href="tel:9380987944" style="text-decoration:none;background:var(--rose);color:white;padding:8px 18px;border-radius:30px;font-size:0.8rem;font-weight:600;white-space:nowrap;box-shadow:0 4px 14px rgba(212,96,122,0.3);">📞 93809 87944</a>
+        </div>
+        <div style="background:linear-gradient(135deg,var(--petal),#fff8fa);border-radius:16px;padding:18px 22px;display:flex;align-items:center;gap:16px;border-left:4px solid var(--mauve);">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--mauve),#d4a0b0);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">🎓</div>
+          <div style="flex:1;">
+            <div style="font-size:0.67rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--mauve);margin-bottom:3px;">GS of BCA</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--deep);">Soukhya Hegde</div>
+          </div>
+          <a href="tel:6363907578" style="text-decoration:none;background:var(--mauve);color:white;padding:8px 18px;border-radius:30px;font-size:0.8rem;font-weight:600;white-space:nowrap;box-shadow:0 4px 14px rgba(196,122,138,0.3);">📞 63639 07578</a>
+        </div>
+        <div style="background:linear-gradient(135deg,var(--petal),#fff8fa);border-radius:16px;padding:18px 22px;display:flex;align-items:center;gap:16px;border-left:4px solid var(--gold);">
+          <div style="width:44px;height:44px;background:linear-gradient(135deg,var(--gold),#d4b880);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.2rem;flex-shrink:0;">🎓</div>
+          <div style="flex:1;">
+            <div style="font-size:0.67rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#b8903a;margin-bottom:3px;">GS of BBA</div>
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;font-weight:600;color:var(--deep);">Suzen</div>
+          </div>
+          <a href="tel:8762158528" style="text-decoration:none;background:var(--gold);color:white;padding:8px 18px;border-radius:30px;font-size:0.8rem;font-weight:600;white-space:nowrap;box-shadow:0 4px 14px rgba(201,169,110,0.35);">📞 87621 58528</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand">Astitva ✦ The Essence of She</div>
+  <div class="footer-org">Global Educare Foundation's | Global College of BBA and BCA</div>
+
+  <div class="footer-line"></div>
+  <div class="footer-bottom">March 3 &amp; 4, 2026 &nbsp;·&nbsp; Celebrating Strength, Style &amp; Spirit</div>
+</footer>
+
+<!-- ===== MODAL ===== -->
+<div class="modal-overlay" id="modalOverlay" onclick="handleOverlayClick(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header" id="modalHeader">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-day-badge" id="modalBadge"></div>
+      <span class="modal-event-icon" id="modalIcon"></span>
+      <div class="modal-title" id="modalTitle"></div>
+      <div class="modal-date-line" id="modalDate"></div>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script>
+const eventsData = {
+  henna: {
+    title: 'Henna Art (Mehndi)',
+    icon: '🌿',
+    badge: 'Day 1  ·  Art  ·  Individual',
+    date: '📅  Tuesday, March 3, 2026',
+    grad: 'linear-gradient(135deg, #7a3048, #c47a8a)',
+    participation: 'Individual',
+    time: ['45 minutes – 1 hour'],
+    rules: [
+      'The competition is individual — no team entries.',
+      'Only one hand (usually the front side) should be decorated.',
+      'Participants must bring their own henna cones and materials.',
+      'Pre-drawn designs are not allowed — all designs must be created on the spot.',
+      'The design should be neat, clean, and creative.',
+    ],
+    judging: [
+      {ji:'✨', label:'Design Creativity'},
+      {ji:'🪄', label:'Neatness'},
+    ]
+  },
+  rangoli: {
+    title: 'Rangoli',
+    icon: '🎨',
+    badge: 'Day 1  ·  Art  ·  Individual / Team (2)',
+    date: '📅  Tuesday, March 3, 2026',
+    grad: 'linear-gradient(135deg, #8b3a52, #d4607a)',
+    participation: 'Individual or Team (up to 2 members)',
+    time: ['1 hour'],
+    rules: [
+      'Participation can be individual or a team of 2 members.',
+      'Theme will be given on the spot (or informed earlier by organizers).',
+      'Only rangoli colors, flowers, or eco-friendly materials are allowed.',
+      'No stencils allowed (as specified by organizers).',
+      'Participants must bring all their own materials.',
+    ],
+    judging: [
+      {ji:'✨', label:'Creativity'},
+      {ji:'🌈', label:'Color Combination'},
+      {ji:'🧹', label:'Cleanliness'},
+      {ji:'🎯', label:'Relevance to Theme'},
+      {ji:'🏆', label:'Overall Presentation'},
+    ]
+  },
+  picture: {
+    title: 'Picture Interpretation',
+    icon: '🖼️',
+    badge: 'Day 1  ·  Creative Writing  ·  Individual',
+    date: '📅  Tuesday, March 3, 2026',
+    grad: 'linear-gradient(135deg, #6a2a40, #b05070)',
+    participation: 'Individual',
+    time: ['30 minutes (preparation + presentation)'],
+    rules: [
+      'The topic/picture will be given on the spot — no prior disclosure.',
+      'Participants must interpret the picture in written form.',
+      'The interpretation should be original and creative.',
+      'Use of mobile phones or reference materials is strictly not allowed.',
+      'The content must be relevant to the given picture.',
+    ],
+    judging: [
+      {ji:'💡', label:'Creativity'},
+      {ji:'💬', label:'Clarity of Thought'},
+      {ji:'🎤', label:'Communication Skills'},
+      {ji:'💪', label:'Confidence'},
+      {ji:'🎯', label:'Relevance to Theme'},
+    ]
+  },
+  ramp: {
+    title: 'Ramp Walk',
+    icon: '👠',
+    badge: 'Day 2  ·  Fashion & Performance',
+    date: '📅  Wednesday, March 4, 2026',
+    grad: 'linear-gradient(135deg, #4a1830, #904060)',
+    participation: 'Individual or Group',
+    time: ['3–5 minutes per participant (ramp walk + monologue)'],
+    theme: "International Women's Day",
+    rules: [
+      'Participants must portray a famous woman personality (historical figure, social reformer, scientist, leader, artist, etc.).',
+      'Costume must be appropriate and matching the chosen personality.',
+      'A short monologue must be delivered while walking the ramp, highlighting achievements and contributions of the personality.',
+      'Vulgarity, inappropriate language, or disrespectful content is strictly prohibited.',
+      'Background music (if required) must be submitted before the event begins.',
+      'Decision of the judges will be final.',
+    ],
+    judging: [
+      {ji:'👗', label:'Costume & Resemblance'},
+      {ji:'💫', label:'Confidence & Stage Presence'},
+      {ji:'🗣️', label:'Clarity of Speech'},
+      {ji:'♀️', label:"Content Relevance to Women's Day"},
+      {ji:'🌟', label:'Overall Impact'},
+    ]
+  },
+  dance: {
+    title: 'Dance Competition',
+    icon: '💃',
+    badge: 'Day 2  ·  Performing Arts',
+    date: '📅  Wednesday, March 4, 2026',
+    grad: 'linear-gradient(135deg, #4a1830, #a04868)',
+    participation: 'Solo or Group (as decided by organizers)',
+    time: ['Solo: 3–4 minutes', 'Group: 4–6 minutes'],
+    theme: "Women's Empowerment / Women's Day",
+    rules: [
+      'Performance must reflect women empowerment, equality, or achievements of women.',
+      'Songs used must be decent and appropriate for the Women\'s Day theme.',
+      'Participants must submit their audio track in advance (pen drive/mobile as instructed).',
+      'Props are allowed but must be safe and easy to manage on stage.',
+      'Objectionable moves or costumes are strictly not allowed.',
+      'Participants must report 30 minutes before the event starts.',
+      'Judges\' decision will be final.',
+    ],
+    judging: [
+      {ji:'🎯', label:'Theme Presentation'},
+      {ji:'😊', label:'Expressions & Coordination'},
+      {ji:'✨', label:'Creativity'},
+      {ji:'🎭', label:'Choreography'},
+      {ji:'🌟', label:'Overall Performance'},
+    ]
+  },
+  cooking: {
+    title: 'Cooking Without Fire',
+    icon: '🍽️',
+    badge: 'Day 1  ·  Culinary  ·  Individual / Team (2)',
+    date: '📅  Tuesday, March 3, 2026',
+    grad: 'linear-gradient(135deg, #8b3a52, #c06878)',
+    participation: 'Individual or Team (up to 2 members)',
+    time: ['1 hour'],
+    rules: [
+      'Participation can be individual or a team of 2 members.',
+      'Only food items that do not require cooking or heating are allowed.',
+      'Participants must bring all ingredients and utensils.',
+      'Gas stoves, induction cookers, or any heating devices are strictly prohibited.',
+      'The dish should be healthy and hygienic.',
+    ],
+    judging: [
+      {ji:'😋', label:'Taste'},
+      {ji:'🍱', label:'Presentation'},
+      {ji:'🥗', label:'Nutrition Value'},
+      {ji:'💡', label:'Creativity'},
+      {ji:'🧽', label:'Cleanliness'},
+    ]
+  }
+};
+
+function openModal(key) {
+  const e = eventsData[key];
+  if (!e) return;
+
+  // Header
+  document.getElementById('modalHeader').style.background = e.grad;
+  document.getElementById('modalBadge').textContent = e.badge;
+  document.getElementById('modalIcon').textContent = e.icon;
+  document.getElementById('modalTitle').textContent = e.title;
+  document.getElementById('modalDate').innerHTML = e.date;
+
+  let html = '';
+
+  // Theme strip
+  if (e.theme) {
+    html += `<div class="modal-section">
+      <div class="modal-section-label">Theme</div>
+      <div class="theme-box">🌸 ${e.theme}</div>
+    </div>`;
+  }
+
+  // Participation & Time
+  html += `<div class="modal-section">
+    <div class="modal-section-label">Participation &amp; Time Limit</div>
+    <div class="info-row">
+      <div class="info-pill">
+        <div class="info-pill-label">Participation</div>
+        <div class="info-pill-val">${e.participation}</div>
+      </div>
+      <div class="info-pill">
+        <div class="info-pill-label">Time Limit</div>
+        <div class="info-pill-val">${e.time.map(t=>'⏱ '+t).join('<br>')}</div>
+      </div>
+    </div>
+  </div>`;
+
+  // Rules
+  html += `<div class="modal-section">
+    <div class="modal-section-label">Rules &amp; Regulations</div>
+    <ul class="rule-list">
+      ${e.rules.map((r,i)=>`<li><div class="rule-bullet">${i+1}</div><span>${r}</span></li>`).join('')}
+    </ul>
+  </div>`;
+
+  // Judging
+  html += `<div class="modal-section">
+    <div class="modal-section-label">Judging Criteria</div>
+    <div class="judging-grid">
+      ${e.judging.map(j=>`<div class="judge-pill"><span class="ji">${j.ji}</span>${j.label}</div>`).join('')}
+    </div>
+  </div>`;
+
+  document.getElementById('modalBody').innerHTML = html;
+  document.getElementById('modal').scrollTop = 0;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function handleOverlayClick(e) {
+  if (e.target === document.getElementById('modalOverlay')) closeModal();
+}
+
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// Scroll reveal
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Nav active
+window.addEventListener('scroll', () => {
+  let curr = '';
+  document.querySelectorAll('section[id]').forEach(s => { if (window.scrollY >= s.offsetTop - 100) curr = s.id; });
+  document.querySelectorAll('.nav-links a').forEach(a => { a.style.color = a.getAttribute('href') === '#'+curr ? 'var(--rose)' : ''; });
+});
+</script>
+</body>
+</html>
